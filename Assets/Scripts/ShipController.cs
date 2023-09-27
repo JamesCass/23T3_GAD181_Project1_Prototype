@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class ShipController : MonoBehaviour
 {
     [SerializeField] private float maxVelocity = 3;
-    [SerializeField] private float rotationSpeed = 3;
+    [SerializeField] private float rotationSpeed = 1;
     private Rigidbody2D rb;
     private bool isPackageGone = false; 
     
