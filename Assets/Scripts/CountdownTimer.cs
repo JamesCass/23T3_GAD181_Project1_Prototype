@@ -10,6 +10,7 @@ public class CountdownTimer : MonoBehaviour
 
     private void Start()
     {
+        //on start sets the current time of the countdown to the set countdown time. 
         currentTime = countdownTime;
     }
 

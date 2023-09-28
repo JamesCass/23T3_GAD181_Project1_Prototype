@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,14 +8,13 @@ public class ShipController : MonoBehaviour
 {
     [SerializeField] private float maxVelocity = 3;
     [SerializeField] private float rotationSpeed = 1;
-    private Rigidbody2D rb;
-    private bool isPackageGone = false; 
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject package;
+  
     
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        isPackageGone = false;
-        
     }
     private void Update()
     {
@@ -45,12 +45,14 @@ public class ShipController : MonoBehaviour
         t.Rotate(0, 0, amount);
     }
 
+    //When the game object with the tag "Package" is collided with the object is destroyed. 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Package"))
         {
-            Destroy(other.gameObject);
+            package.SetActive(false);
         }
-        isPackageGone = true; 
     }
+
+
 }
