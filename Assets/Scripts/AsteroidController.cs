@@ -26,7 +26,8 @@ public class AsteroidController : MonoBehaviour
         if (col.CompareTag("Player"))
         {
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // Send a message to the "Player" object to call a method named "LoseLife"
+            col.gameObject.SendMessage("LoseLife");
         }
     }
 }

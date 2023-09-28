@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 222979035125861246}
   - component: {fileID: 5802145455533637015}
   - component: {fileID: 1111873546265157222}
+  - component: {fileID: 4507319608964788849}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -176,3 +177,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVelocity: 1
   rotationSpeed: 1
+  rb: {fileID: 0}
+  package: {fileID: 0}
+--- !u!114 &4507319608964788849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254107761519823958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e428f7b53f3c4e45bf534bac6d74763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLives: 3
