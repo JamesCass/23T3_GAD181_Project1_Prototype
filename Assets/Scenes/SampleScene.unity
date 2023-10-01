@@ -233,6 +233,29 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &93014267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4507319608964788849, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
+  m_PrefabInstance: {fileID: 1701863886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93014260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e428f7b53f3c4e45bf534bac6d74763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &93014272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93014260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fa384db4c221644b0485518b71ecf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &109281940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1406,6 +1429,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1254107761519823958, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       insertIndex: -1
       addedObject: {fileID: 93014266}
+    - targetCorrespondingSourceObject: {fileID: 1254107761519823958, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 93014272}
   m_SourcePrefab: {fileID: 100100000, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
 --- !u!1001 &1740575737
 PrefabInstance:
@@ -1589,6 +1615,7 @@ GameObject:
   - component: {fileID: 2056222642}
   - component: {fileID: 2056222645}
   - component: {fileID: 2056222644}
+  - component: {fileID: 2056222646}
   m_Layer: 5
   m_Name: LivesCounter
   m_TagString: Untagged
@@ -1603,7 +1630,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056222641}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1712,6 +1739,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056222641}
   m_CullTransparentMesh: 1
+--- !u!114 &2056222646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056222641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef52c29c34ca2941aff49214b0dc18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesSystem: {fileID: 93014267}
 --- !u!4 &2059086166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3727493415376220997, guid: f8297c9972965d34589d14238aefeb84, type: 3}

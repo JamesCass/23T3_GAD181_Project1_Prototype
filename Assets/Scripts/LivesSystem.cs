@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//This is working but the Display isnt, unsure if there is something wrong with this script currently
-
 public class LivesSystem : MonoBehaviour
 {
     public int startingLives = 3;
@@ -33,3 +31,4 @@ public class LivesSystem : MonoBehaviour
         }
     }
 }
+

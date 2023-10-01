@@ -1,32 +1,39 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
-//This should be working but just isnt for some reason.
-//MUST FIX!!
 
 public class LivesDisplay : MonoBehaviour
 {
     public LivesSystem livesSystem; // Reference to the LivesSystem script
-    private Text livesText; // Reference to the Text component
+    private TextMeshProUGUI livesText; // Reference to the Text component
 
     private void Start()
     {
         // Get a reference to the Text component
-        livesText = GetComponent<Text>();
+        livesText = GetComponent<TextMeshProUGUI>();
+
+        if (livesText == null)
+        {
+            Debug.LogError("Text component not found on this GameObject.");
+        }
+
+        // Check if livesSystem is assigned in the Inspector
+        if (livesSystem == null)
+        {
+            Debug.LogError("LivesSystem is not assigned in the Inspector.");
+        }
     }
 
     private void Update()
     {
-        // Update the text to display the current number of lives
-        if (livesSystem != null)
+        // Check if livesSystem and livesText exist
+        if (livesSystem != null && livesText != null)
         {
             livesText.text = "Lives: " + livesSystem.CurrentLives.ToString();
         }
         else
         {
-            // Add some debug information or handle the case where livesSystem is null.
-            // For example, you can display an error message or set livesText to something like "Lives: N/A".
-            Debug.LogError("LivesSystem is not assigned to LivesDisplay.");
+            Debug.LogError("LivesSystem or Text component is not assigned.");
         }
     }
 }

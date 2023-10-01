@@ -1,60 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-
-
-//Working but not really, going through the bottom part of the map works however it doesn't recognize the rest of the positioning correctly not sure why.
-//My guess it that it has to do with the 0's in the if satements but this is yet to be fully tested, I will come back to this. However for the time being leave this script unattached
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class ScreenWrap : MonoBehaviour
 {
-
     private Rigidbody2D myRigidBody;
+    private Camera mainCamera;
+    private float objectWidth;
+    private float objectHeight;
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        mainCamera = Camera.main;
+
+        // Get the size of the object (assuming it has a BoxCollider2D)
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+        if (collider != null)
+        {
+            objectWidth = collider.size.x;
+            objectHeight = collider.size.y;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Get the screen position of object in Pixels
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+        // Get the screen position of the object in pixels
+        Vector3 screenPos = mainCamera.WorldToScreenPoint(transform.position);
 
+        // Get the screen dimensions in pixels
+        float screenWidth = Screen.width;
+        float screenHeight = Screen.height;
 
-        //Get the right & left side of the screen in world units
-        float rightSideOfScreenInWorld = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).x;
-        float leftSideOfScreenInWorld = Camera.main.ScreenToWorldPoint(new Vector2(0f, 0f)).x;
-
-        float topOfScreenInWorld = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).y;
-        float bottomOfScreenInWorld = Camera.main.ScreenToWorldPoint(new Vector2(0f, 0f)).y;
-
-        //If player is moving through the left side of the screen
-        if (screenPos.x <= 0 && myRigidBody.velocity.x < 0)
+        // Check if the object is out of the screen bounds
+        if (screenPos.x < 0 - objectWidth / 2)
         {
-            transform.position = new Vector2(rightSideOfScreenInWorld, transform.position.y);
+            // Wrap to the right side of the screen
+            transform.position = mainCamera.ScreenToWorldPoint(new Vector3(screenWidth + objectWidth / 2, screenPos.y, screenPos.z));
+        }
+        else if (screenPos.x > screenWidth + objectWidth / 2)
+        {
+            // Wrap to the left side of the screen
+            transform.position = mainCamera.ScreenToWorldPoint(new Vector3(0 - objectWidth / 2, screenPos.y, screenPos.z));
         }
 
-        //If player is moving through the right side of the screen
-        else if (screenPos.x <= Screen.width && myRigidBody.velocity.x > 0)
+        if (screenPos.y < 0 - objectHeight / 2)
         {
-            transform.position = new Vector2(leftSideOfScreenInWorld, transform.position.y);
+            // Wrap to the top side of the screen
+            transform.position = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, screenHeight + objectHeight / 2, screenPos.z));
         }
-
-        //If the player is moving through the top of the screen
-        else if (screenPos.x <= Screen.height && myRigidBody.velocity.y > 0)
+        else if (screenPos.y > screenHeight + objectHeight / 2)
         {
-            transform.position = new Vector2(transform.position.x, bottomOfScreenInWorld);
-        }
-
-        //If player is moving through the bottom of the screen
-        else if (screenPos.y <= 0 && myRigidBody.velocity.y < 0)
-        {
-            transform.position = new Vector2(transform.position.x, topOfScreenInWorld);
+            // Wrap to the bottom side of the screen
+            transform.position = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, 0 - objectHeight / 2, screenPos.z));
         }
     }
 }
