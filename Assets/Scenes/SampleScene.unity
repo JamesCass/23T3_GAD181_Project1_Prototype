@@ -1542,11 +1542,15 @@ PrefabInstance:
       objectReference: {fileID: 461000660}
     - target: {fileID: 1111873546265157222, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: maxVelocity
-      value: 3
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111873546265157222, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
+      propertyPath: thrustForce
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1111873546265157222, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: rotationSpeed
-      value: 2
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1254107761519823958, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_Name

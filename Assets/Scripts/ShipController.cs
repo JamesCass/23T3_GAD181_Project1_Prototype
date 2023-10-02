@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class ShipController : MonoBehaviour
 {
     [SerializeField] private float maxVelocity = 3;
+    [SerializeField] private float thrustForce = 1;
     [SerializeField] private float rotationSpeed = 1;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject package;
@@ -25,7 +26,7 @@ public class ShipController : MonoBehaviour
         float xAxis = Input.GetAxis("Horizontal");
 
         ThrustForward(yAxis);
-        Rotate(transform, xAxis * -rotationSpeed);
+        Rotate(transform, xAxis * -rotationSpeed * Time.deltaTime);
 
         // Check if the "r" key is pressed
         if (Input.GetKeyDown(KeyCode.R))
@@ -44,7 +45,7 @@ public class ShipController : MonoBehaviour
 
     private void ThrustForward(float amount)
     {
-        Vector2 force = transform.up * amount;
+        Vector2 force = transform.up * amount * thrustForce * Time.deltaTime;
 
         rb.AddForce(force);
     }
