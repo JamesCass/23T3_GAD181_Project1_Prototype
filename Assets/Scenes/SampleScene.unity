@@ -1600,6 +1600,10 @@ PrefabInstance:
       propertyPath: startingLives
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5802145455533637015, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 222979035125861246, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
     m_RemovedGameObjects: []
