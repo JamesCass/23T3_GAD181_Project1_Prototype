@@ -20,14 +20,4 @@ public class AsteroidController : MonoBehaviour
         rb.AddForce(thrust);
         rb.AddTorque(torque);
     }
-    //When the game object tagged player collides the scene is reloaded as a respawn system.
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player"))
-        {
-
-            // Send a message to the "Player" object to call a method named "LoseLife"
-            col.gameObject.SendMessage("LoseLife");
-        }
-    }
 }

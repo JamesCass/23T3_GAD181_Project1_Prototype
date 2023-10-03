@@ -11,18 +11,25 @@ public class DepotController : MonoBehaviour
     
     //When a 2D collider enters the trigger AKA "Player" checks to see if the set gameobject is active or not AKA "The Package"
     //... if the package is still active enables some text telling the player they still need to pick it up or if the package is collected the scene tagged (2) is loaded.
-    private void OnTriggerEnter2D(Collider2D collision)
+   
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
         {
-            if (package.activeSelf)
+            if (other.gameObject.CompareTag("Player"))
             {
-                packageText.SetText("You must pick up the package!");
-                Debug.Log("THE PACKAGE MUST BE PICKED UP");
-            }
-            else
-            {
-                SceneManager.LoadScene(2);
-                Debug.Log("THE PACKAGE HAS BEEN PICKED UP");
+
+
+                if (package.activeSelf)
+                {
+                    packageText.SetText("You must pick up the package!");
+                    Debug.Log("THE PACKAGE MUST BE PICKED UP");
+                }
+                else
+                {
+                    SceneManager.LoadScene(2);
+                    Debug.Log("THE PACKAGE HAS BEEN PICKED UP");
+                }
             }
         }
     }

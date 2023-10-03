@@ -50,6 +50,15 @@ public class ShipController : MonoBehaviour
         rb.AddForce(force);
     }
 
+    //private void Boost()
+    //{
+     //   if(Input.GetKeyDown(KeyCode.Space))
+     //   {
+     //       Vector2 force = transform.up * 3 * thrustForce * Time.deltaTime;
+     //       rb.AddForce(force);
+     //   }
+   // }
+
     private void Rotate(Transform t, float amount)
     {
         t.Rotate(0, 0, amount);
