@@ -33,14 +33,18 @@ public class ShipController : MonoBehaviour
         {
             ResetPosition(); // Call the function to reset the position
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Boost();
+        }
     }
 
-    private void ClampVelocity()
+    private void Boost()
     {
-        float x = Mathf.Clamp(rb.velocity.x, -maxVelocity, maxVelocity);
-        float y = Mathf.Clamp(rb.velocity.y, -maxVelocity, maxVelocity);
+        Vector2 force = transform.up * 450 * thrustForce * Time.deltaTime;
 
-        rb.velocity = new Vector2(x, y);
+        rb.AddForce(force);
     }
 
     private void ThrustForward(float amount)
@@ -50,14 +54,9 @@ public class ShipController : MonoBehaviour
         rb.AddForce(force);
     }
 
-    //private void Boost()
-    //{
-     //   if(Input.GetKeyDown(KeyCode.Space))
-     //   {
-     //       Vector2 force = transform.up * 3 * thrustForce * Time.deltaTime;
-     //       rb.AddForce(force);
-     //   }
-   // }
+    
+    
+   
 
     private void Rotate(Transform t, float amount)
     {
