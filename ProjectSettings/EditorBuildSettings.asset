@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScreen.unity
     guid: e32ebdf57d2390e45a14cce446943e8c
+  - enabled: 0
+    path: Assets/TESTING_JAMES/TESTING.unity
+    guid: 599f2e3b55e32964892b1b08394b6fcb
+  - enabled: 0
+    path: Assets/TESTING_JAMES/TEST_MENU.unity
+    guid: 5b86e30f04addb945a68efa337e42345
   m_configObjects: {}
