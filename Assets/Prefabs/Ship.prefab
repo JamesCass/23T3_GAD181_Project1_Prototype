@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2891938744799424186}
   - component: {fileID: 8203997271365306332}
   - component: {fileID: 222979035125861246}
+  - component: {fileID: 2857060968487780479}
   - component: {fileID: 5802145455533637015}
   - component: {fileID: 1111873546265157222}
   - component: {fileID: 4507319608964788849}
@@ -136,6 +137,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &2857060968487780479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254107761519823958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fa384db4c221644b0485518b71ecf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &5802145455533637015
 Rigidbody2D:
   serializedVersion: 4
@@ -149,8 +162,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 3
+  m_AngularDrag: 3
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -175,8 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27eb2bfd460fb434093c9d9705387f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1
-  rotationSpeed: 1
+  maxVelocity: 2000
+  thrustForce: 900
+  rotationSpeed: 400
   rb: {fileID: 0}
   package: {fileID: 0}
 --- !u!114 &4507319608964788849

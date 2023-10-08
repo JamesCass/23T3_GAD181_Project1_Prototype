@@ -9,6 +9,7 @@ public class AsteroidController : MonoBehaviour
     [SerializeField] private float maxThrust;
     [SerializeField] private float maxTorque;
     [SerializeField] private Rigidbody2D rb;
+  
 
    
     private void Start()
@@ -20,4 +21,5 @@ public class AsteroidController : MonoBehaviour
         rb.AddForce(thrust);
         rb.AddTorque(torque);
     }
+
 }
