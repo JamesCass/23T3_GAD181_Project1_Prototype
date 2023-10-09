@@ -27,7 +27,7 @@ public class LivesSystem : MonoBehaviour
         if (currentLives <= 0)
         {
             // Load the "EndScene" when the player runs out of lives
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
