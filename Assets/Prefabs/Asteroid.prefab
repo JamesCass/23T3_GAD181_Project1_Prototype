@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8991201608953641987}
-  - component: {fileID: 1432893183848362575}
-  - component: {fileID: 977087188647874569}
   - component: {fileID: 1104240960788007074}
   - component: {fileID: 5886442535248784171}
   - component: {fileID: 250244907190642564}
+  - component: {fileID: 7384581318516027525}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -37,53 +36,6 @@ Transform:
   - {fileID: 1349002411556349508}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1432893183848362575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2863198931260087692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617ffa9513d85be41a1d56742883e99f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &977087188647874569
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2863198931260087692}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.55
 --- !u!114 &1104240960788007074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +90,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fa384db4c221644b0485518b71ecf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &7384581318516027525
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863198931260087692}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.27694607, y: 0.49446392}
+      - {x: -0.28067118, y: 0.4958456}
+      - {x: -0.50172275, y: 0.27410495}
+      - {x: -0.49591637, y: -0.27491665}
+      - {x: -0.2748351, y: -0.4968934}
+      - {x: 0.28341973, y: -0.4920566}
+      - {x: 0.49419212, y: -0.28238344}
+      - {x: 0.49827194, y: 0.2782454}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5183288079407729868
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,8 +154,8 @@ GameObject:
   - component: {fileID: 1349002411556349508}
   - component: {fileID: 8593674118431638556}
   - component: {fileID: 1048359338130556624}
-  - component: {fileID: 2015254176118460280}
   - component: {fileID: 1830127015587952105}
+  - component: {fileID: 415990282889809537}
   m_Layer: 0
   m_Name: AsteroidCollider
   m_TagString: Untagged
@@ -246,8 +251,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &2015254176118460280
-CircleCollider2D:
+--- !u!114 &1830127015587952105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183288079407729868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617ffa9513d85be41a1d56742883e99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipInsideCollider: 0
+--- !u!60 &415990282889809537
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -279,17 +297,28 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.185
---- !u!114 &1830127015587952105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5183288079407729868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617ffa9513d85be41a1d56742883e99f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.09220476, y: 0.16134818}
+      - {x: -0.16134802, y: 0.091935106}
+      - {x: -0.16188732, y: -0.09139588}
+      - {x: -0.09139572, y: -0.16188748}
+      - {x: 0.09112615, y: -0.16188748}
+      - {x: 0.16269635, y: -0.09193502}
+      - {x: 0.16281115, y: 0.023540456}
+      - {x: 0.1636639, y: 0.065097764}
+      - {x: 0.16244414, y: 0.08868643}
+      - {x: 0.16241567, y: 0.09310065}
+      - {x: 0.1596672, y: 0.09626901}
+      - {x: 0.12629098, y: 0.12543681}
+      - {x: 0.09172808, y: 0.16187413}
+  m_UseDelaunayMesh: 0

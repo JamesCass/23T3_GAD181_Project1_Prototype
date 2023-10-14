@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
     //When start game button is pressed scene marked "1" is loaded
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     //When quit game button is pressed the application is quit
@@ -22,5 +22,15 @@ public class MenuController : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void Settings()
+    {
+        SceneManager.LoadScene(23);
     }
 }

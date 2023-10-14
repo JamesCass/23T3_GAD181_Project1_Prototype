@@ -42,7 +42,7 @@ public class ShipController : MonoBehaviour
 
     private void Boost()
     {
-        Vector2 force = transform.up * 450 * thrustForce * Time.deltaTime;
+        Vector2 force = transform.up * 120 * thrustForce * Time.deltaTime;
 
         rb.AddForce(force);
     }
