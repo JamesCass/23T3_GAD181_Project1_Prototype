@@ -1838,11 +1838,11 @@ PrefabInstance:
       objectReference: {fileID: 842221648}
     - target: {fileID: 1111873546265157222, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: thrustForce
-      value: 1300
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1111873546265157222, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: rotationSpeed
-      value: 550
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1254107761519823958, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_Name
@@ -1894,11 +1894,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5802145455533637015, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_LinearDrag
-      value: 2
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 5802145455533637015, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_AngularDrag
-      value: 2
+      value: 2.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
