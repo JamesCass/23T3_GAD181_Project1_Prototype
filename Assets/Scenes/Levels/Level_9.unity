@@ -1922,7 +1922,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!114 &1757374324 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4507319608964788849, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
@@ -2146,6 +2146,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b7d00182b37615d42b7d42f97dc2d716, type: 2}
+    - target: {fileID: 4559325523929303550, guid: 65bb9ae851c5cd743adda92b7e761c0b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559325523929303550, guid: 65bb9ae851c5cd743adda92b7e761c0b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4559325523929303550, guid: 65bb9ae851c5cd743adda92b7e761c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.56
