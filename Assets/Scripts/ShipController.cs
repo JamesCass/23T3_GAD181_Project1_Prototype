@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class ShipController : MonoBehaviour
@@ -37,6 +38,11 @@ public class ShipController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Boost();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
