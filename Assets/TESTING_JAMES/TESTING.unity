@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 209892809}
-  setTime: 0
+  setTime: 10
 --- !u!4 &105006297
 Transform:
   m_ObjectHideFlags: 0
@@ -1729,11 +1729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2891938744799424186, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.37730503
+      value: 7.98
       objectReference: {fileID: 0}
     - target: {fileID: 2891938744799424186, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.396142
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 2891938744799424186, guid: dfbbb6282a898a84d910b1e98d9c5416, type: 3}
       propertyPath: m_LocalPosition.z

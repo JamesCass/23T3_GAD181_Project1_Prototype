@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class TimerController : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    public float setTime = 1f; // Initial countdown time in seconds
+    public float setTime = 30f; // Initial countdown time in seconds
     private float currentTime;
 
     private void Start()
@@ -17,14 +17,14 @@ public class TimerController : MonoBehaviour
     private void Update()
     {
         // Update the timer and display it
-        currentTime += Time.deltaTime;
+        currentTime -= Time.deltaTime;
         timerText.text = currentTime.ToString("F1");
 
         // Check if the timer has reached zero
-        //if (currentTime <= 0)
-        //{
-        //    // Load the next scene (replace "YourNextSceneName" with your actual scene name)
-        //    SceneManager.LoadScene(2);
-        //}
+        if (currentTime <= 0)
+        {
+            // Load the next scene (replace "YourNextSceneName" with your actual scene name)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
