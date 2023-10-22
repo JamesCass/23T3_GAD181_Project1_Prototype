@@ -32,7 +32,7 @@ public class ShipController : MonoBehaviour
         // Check if the "r" key is pressed
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ResetPosition(); // Call the function to reset the position
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

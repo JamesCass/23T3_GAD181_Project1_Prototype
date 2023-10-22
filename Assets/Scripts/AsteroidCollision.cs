@@ -16,9 +16,6 @@ public class AsteroidCollision : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            if (shipInsideCollider == false)
-            // Send a message to the "Player" object to call a method named "LoseLife"
-            col.gameObject.SendMessage("LoseLife");
 
             //triggers explosion animation
             myAnimation.SetTrigger("ExplosionTrigger");

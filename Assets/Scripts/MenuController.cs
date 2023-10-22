@@ -33,4 +33,14 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(23);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(24);
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
